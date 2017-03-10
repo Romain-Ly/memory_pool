@@ -47,7 +47,7 @@ $(TARGET_SO) : $(FPIC_OBJ)
 
 #test
 test: $(TARGET_ST) $(TARGET_SO)
-	$(CC) $(CFLAGS) $(SAMPLE_SRC) -o $(TARGET_TEST)_static -static $(LDFLAGS) $(TARGET_ST)
+	$(CC) $(CFLAGS) $(SAMPLE_SRC) -o $(TARGET_TEST)_static $(LDFLAGS) $(TARGET_ST)
 	$(CC) $(CFLAGS) $(SAMPLE_SRC) -o $(TARGET_TEST)_shared $(LDFLAGS) $(TARGET_SO)
 
 .PHONY: clean
